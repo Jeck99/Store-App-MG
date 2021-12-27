@@ -16,8 +16,8 @@ export default function ProductsComponent() {
     <div>Products
       <button onClick={() => setToggle(!toggle)}>TOGGLE COMPONENTS</button>
       {
-        toggle ? listOfProducts.map(() =>
-          <Product name price qunt isInSeasion />)
+        toggle ? listOfProducts.map((pItem) =>
+          <Product productName={pItem.name} price qunt isInSeasion />)
           : <AddProductComponent />
       }
 
